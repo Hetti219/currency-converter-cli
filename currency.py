@@ -37,11 +37,12 @@ def convert_currency(base):
 while True:
     # Prompt the user for the base currency
     base = input("Enter the base currency (q for quit): ").upper()
-    # The amount of base currency
-    amount = float(input(f"Enter amount of {base}: "))
 
     if base == 'Q':  # Exit the loop if the user enters 'q'
         break
+
+    # The amount of base currency
+    amount = float(input(f"Enter amount of {base}: "))
 
     data = convert_currency(base)
     if not data:  # Skip to the next iteration if there was an error fetching data
