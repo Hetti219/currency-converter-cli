@@ -30,20 +30,24 @@ def convert_currency(base):
         data = response.json()  # Parse the JSON response
         return data["data"]  # Extract the exchange rates from the response
     except:
-        print("Invalid currency")
+        print("Invalid currency")  # Handle potential request errors
         return None
 
 
 while True:
-    base = input("Enter the base currency (q for quit):").upper()
+    # Prompt the user for the base currency
+    base = input("Enter the base currency (q for quit): ").upper()
+    # The amount of base currency
+    amount = float(input(f"Enter amount of {base}: "))
 
-    if base == 'Q':
+    if base == 'Q':  # Exit the loop if the user enters 'q'
         break
 
     data = convert_currency(base)
-    if not data:
+    if not data:  # Skip to the next iteration if there was an error fetching data
         continue
 
-    del data[base]
+    del data[base]  # Remove the base currency from the exchange rates
     for ticker, value in data.items():
-        print(f"{ticker}: {value}")
+        # Print the exchange rates for each currency in the entered amount
+        print(f"{ticker}: {value*amount}")
