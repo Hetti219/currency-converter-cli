@@ -1,7 +1,42 @@
 # currency-converter-cli
+
 A simple CLI currency converter program developed using Python.
 
+## Requirements
+
+- Python3
+- Python <code>requests</code> library:
+  ```python
+  pip install requests
+  ```
+
+## Installation
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/your-username/currency-converter-cli.git
+   ```
+
+2. **Navigate to the Project Directory:**
+
+   ```bash
+   cd currency-converter-cli
+   ```
+
+3. **Get API Key:**
+   - Obtain your API key from [Free Currency API](https://freecurrencyapi.com/).
+   - Replace the placeholder API key in the code with your actual key:
+     ```python
+     # Your API key for the currency conversion API
+     API_KEY = 'your_actual_api_key'
+     ```
+
 ## How to use
-Enter the currency code you want to convert
-<br>
-Enter the amount
+
+- Run the program by executing the following command:
+  ```bash
+  python currency_converter.py
+  ```
+  -Enter the currency code you want to convert
+  -Enter the amount
