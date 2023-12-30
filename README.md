@@ -44,5 +44,5 @@ This is only available for Windows user only.
   ```bash
   python currency_converter.py
   ```
-  -Enter the currency code you want to convert
-  -Enter the amount
+  - Enter the currency code you want to convert
+  - Enter the amount
