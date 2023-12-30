@@ -15,7 +15,7 @@ A simple CLI currency converter program developed using Python.
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/currency-converter-cli.git
+   git clone https://github.com/Hetti219/currency-converter-cli.git
    ```
 
 2. **Navigate to the Project Directory:**
