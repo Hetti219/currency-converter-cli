@@ -32,6 +32,12 @@ A simple CLI currency converter program developed using Python.
      API_KEY = 'your_actual_api_key'
      ```
 
+**Alternative**
+
+Or you can download the <code>.exe</code> file from the <code>dist</code> directory and run directly on you device.
+<br>
+This is only available for Windows user only.
+
 ## How to use
 
 - Run the program by executing the following command:
