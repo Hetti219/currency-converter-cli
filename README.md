@@ -1,6 +1,6 @@
-## currency-converter-cli
+# currency-converter-cli
 A simple CLI currency converter program developed using Python.
 
-# How to use
+## How to use
 Enter the currency code you want to convert
 Enter the amount
