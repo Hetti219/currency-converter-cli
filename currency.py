@@ -11,7 +11,7 @@ CURRENCIES = ["EUR", "USD", "JPY", "BGN", "CZK", "DKK", "GBP", "HUF", "PLN", "RO
               "IDR", "ILS", "INR", "KRW", "MXN", "MYR", "NZD", "PHP", "SGD", "THB", "ZAR"]
 
 
-def convert_currency(base):
+def convert_currency(base: str) -> dict:
     """Fetches and returns currency exchange rates from the API.
 
     Args:
@@ -34,21 +34,26 @@ def convert_currency(base):
         return None
 
 
-while True:
-    # Prompt the user for the base currency
-    base = input("Enter the base currency (q for quit): ").upper()
+def main():
+    while True:
+        # Prompt the user for the base currency
+        base = input("Enter the base currency (q for quit): ").upper()
 
-    if base == 'Q':  # Exit the loop if the user enters 'q'
-        break
+        if base == 'Q':  # Exit the loop if the user enters 'q'
+            break
 
-    # The amount of base currency
-    amount = float(input(f"Enter amount of {base}: "))
+        # The amount of base currency
+        amount = float(input(f"Enter amount of {base}: "))
 
-    data = convert_currency(base)
-    if not data:  # Skip to the next iteration if there was an error fetching data
-        continue
+        data = convert_currency(base)
+        if not data:  # Skip to the next iteration if there was an error fetching data
+            continue
 
-    del data[base]  # Remove the base currency from the exchange rates
-    for ticker, value in data.items():
-        # Print the exchange rates for each currency in the entered amount
-        print(f"{ticker}: {value*amount}")
+        del data[base]  # Remove the base currency from the exchange rates
+        for ticker, value in data.items():
+            # Print the exchange rates for each currency in the entered amount
+            print(f"{ticker}: {value*amount}")
+
+
+if __name__ == "__main__":
+    main()
